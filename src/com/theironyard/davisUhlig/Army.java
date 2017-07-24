@@ -3,15 +3,16 @@ package com.theironyard.davisUhlig;
 /**
  * Created by duhlig on 7/24/17.
  */
-public class Marines extends Soldier implements MarineFight {
+class Army extends Soldier implements DroppingBombs{
 
-    public Marines(String name, String rank, int serialNumber) {
+    public Army(String name, String rank, int serialNumber) {
         super(name, rank, serialNumber);
     }
 
     public String speak(){
-        return "oorah";
+        return "Hooah";
     }
+
     public String gunFight(){
         return "bang bang";
     }
@@ -20,9 +21,8 @@ public class Marines extends Soldier implements MarineFight {
         return "bam bam";
     }
 
-
-    public String grenadeThrow(){
-        return "boom boom boom";
+    public Bomb callAirSupport(){
+        return new Bomb();
     }
 
 }
